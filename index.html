@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Comunicados / Carimbo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__item">
+            <p class="cabecalho__titulo">INTEGRA.CO</p>
+            <img class="img__logo" src="css/img/logo.png" alt="Logo Integra">
+        </div>
+        <div class="cabecalho__item">
+            <p class="name__funcionario">Your Name</p>
+            <img class="img__funcionario" src="css/img/funcionario.jfif" alt="Foto funcionário">
+        </div>
+    </header>
+    <main>
+        <section class="carrossel">
+                <div class="carrossel__slide">
+                    <button class="botao__modal modal1" >Comunicado <br>Massiva Nordeste</button>
+                    <button class="botao__modal modal2" >Comunicado <br>Massiva Sul</button>
+                    <button class="botao__modal modal3" >Comunicado <br>Massiva Leste</button>
+                    <button class="botao__modal modal4" >Comunicado <br>Massiva Norte</button>
+                    <button class="botao__modal modal5" >Comunicado <br>Massiva Campos Gerais</button>
+                    <button class="botao__modal modal6" >Comunicado <br>Massiva Pindamoiangaba</button>
+                    <button class="botao__modal modal7" >Comunicado <br>Massiva Joaquintava</button>
+                    
+                </div>
+                <div><button class="mostrar__fechar-slide botao__vermelho">Fechar Comunicados</button></div>
+                
+        </section>
+
+        <section>
+            <dialog class="modal" id="imagem_modal1">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado01.png" alt="">
+            </dialog>
+            <dialog class="modal" id="imagem_modal2">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado02.png" alt="">
+            </dialog>
+            <dialog class="modal" id="imagem_modal3">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado03.png" alt="">
+            </dialog>
+            <dialog class="modal" id="imagem_modal4">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado04.png" alt="">
+            </dialog>
+            <dialog class="modal" id="imagem_modal5">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado05.png" alt="">
+            </dialog>
+            <dialog class="modal" id="imagem_modal6">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado06.png" alt="">
+            </dialog>
+            <dialog class="modal" id="imagem_modal7">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado07.png" alt="">
+            </dialog>
+            <dialog class="modal" id="imagem_modal8">
+                <button class="ocultar botao__vermelho">X</button>
+                <img src="css/img/comunicados/comunicado08.png" alt="">
+            </dialog>
+        </section>
+
+        <section class="department">
+            <div class="department__item department__web"></div>
+            <div class="department__item department__csl"></div>
+            <div class="department__item department__base"></div>
+            <div class="department__item department__prv"></div>
+            <div class="department__item department__carimbos" onclick="mostrarFormulario()"><a class="department__carimbos_gerar" href="#" ><p >CARIMBO CO</p></a></div>
+        </section>
+
+        <section class="formulario__carimbo fechar__formulario" id="formulario">
+            <p class="formulario__carimbo-titulo">CARIMBO REDE NEUTRA</p>
+            <form action="" class="">
+                <fieldset class="formulario__carimbo-informacoes">
+                    <legend>Informações</legend>
+                    <div class="informacoes__item">
+                        <label for="codigo-ba-tt">BA/TT:</label><br>
+                        <input type="text" name="codigo-ba-tt" id="codigo-ba-tt" class="input__geral" required><br>
+                        <input type="submit" value="BUSCAR" class="botao__buscar__ba-tt"><br><br>
+
+                        <p>Tipo Serviço:</p>
+                        <input type="radio" id="defeito" name="servico" value="Defeito" checked>
+                        <label for="defeito">Defeito</label>
+                        <input type="radio" id="reparo" name="servico" value="Reparo">
+                        <label for="reparo">Reparo</label><br><br>
+
+                        <label for="tipo-rede">REDE:</label>
+                        <select name="tipo-rede" id="tipo-rede">
+                            <option selected disabled value="">Selecione</option>
+                            <option value="VIVO-1">VIVO-1</option>
+                            <option value="VIVO-2">VIVO-2</option>
+                            <option value="FIBRASIL">FIBRASIL</option>
+                            <option value="ATC">ATC</option>
+                        </select>
+                    </div>
+
+                    <div class="informacoes__item">
+                        <p>SERVIÇOS CONTRATADOS</p><br>
+                        <input type="checkbox" name="servico-contratado" id="servico-banda-larga" value="Banda Larga" checked>
+                        <label for="servico-banda-larga">Banda Larga</label><br><br>
+
+                        <input type="checkbox" name="servico-contratado" id="servico-tv" value="TV">
+                        <label for="servico-tv">TV</label><br><br>
+
+                        <input type="checkbox" name="servico-contratado" id="servico-voip" value="Voip">
+                        <label for="servico-voip">VOIP</label>
+                    </div>
+
+                    <div class="informacoes__item info__gerais">
+                        <label for="velocidade">Velocidade:</label>
+                        <input type="text" id="velocidade" name="velocidade" class="input__geral"><br>
+
+                        <label for="serial-gpon">Serial GPON:</label>
+                        <input type="text" id="serial-gpon" name="serial-gpon" class="input__geral"><br>
+
+                        <label for="designador">Designador de Acesso:</label>
+                        <input type="text" id="designador" name="designador" class="input__geral"><br>
+
+                        <label for="tecnico">Nome Técnico:</label>
+                        <input type="text" id="tecnico" name="tecnico" class="input__geral"><br>
+
+                        <label for="contato">Contato:</label>
+                        <input type="text" id="contato" name="contato" class="input__geral">
+                    </div>
+                </fieldset>
+
+                <div>
+                    <label for="comentario">Observação/Detalhamento da falha:</label><br>
+                    <textarea name="comentario" id="comentario" cols="80" rows="5" class="comentario"></textarea>
+                </div>
+
+                <div class="gerar__carimbo ">
+                    <div class="cancelar__formulario botao__vermelho" onclick="cancelarFormulario()">CANCELAR</div>
+                    
+                    <div class="gerar__formulario botao__verde" onclick="imprimir()">GERAR CARIMBO</div>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="carimbo" id="carimbo">
+            <div class="carimbo__area">
+                <label for="carimbo-text"></label>
+                <textarea name="carimbo-text" id="carimbo-text" cols="50" rows="18"></textarea>
+                <div class="carimbo__item__fechar-copiar">
+                    <button class="botao__verde botao__copiar-carimbo">Copiar<br>Carimbo</button>
+                    <div onclick="fecharCarimbo()" class="botao__vermelho">Fechar</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

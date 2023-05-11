@@ -1,0 +1,248 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.botao__vermelho, .botao__verde {
+    border: 1px solid;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.botao__vermelho{
+    background-color: red;
+}
+
+.botao__verde {
+    background-color: green;
+}
+
+/* cabecalho geral do layout da página */
+.cabecalho {
+    height: 50px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.cabecalho__item {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.img__funcionario, .img__logo {
+    width: 60px;
+}
+
+.department {
+    display: flex;
+    margin: 0 40px 40px;
+}
+
+.department__item {
+    width: 200px;
+    height: 140px;
+}
+
+.department__web {
+    background-color: orange;
+}
+
+.department__csl {
+    background-color: orangered;
+}
+
+.department__base {
+    background-color: skyblue;
+}
+.department__prv {
+    background-color: blue;
+}
+
+.department__carimbos {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.department__carimbos_gerar {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* configurações para carrossel automático */
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }to {
+        transform: translateX(-100%);
+    }
+}
+
+.carrossel {
+    overflow: hidden;
+    padding: 10px 0;
+    background-color: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.carrossel:hover .carrossel__slide {
+    animation-play-state: paused;
+}
+
+.slide__item:active {
+    width: 850px;
+    height: auto;
+    margin: 0 50px;
+}
+
+.carrossel__slide {
+    display: inline-block;
+    animation: 55s slide infinite linear;
+
+}
+
+.carrossel__slide img{
+    height: 80px;
+    width: 200px;
+    margin: 0 40px;
+}
+
+.mostrar__fechar-slide {
+    margin-left: 10px;
+}
+
+.botao__modal {
+    padding: 5px;
+    width: 200px;
+    margin: 0 40px;
+    border-radius: 10px;
+}
+
+.modal {
+    margin: auto;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* configurações da geração de carimbo */
+.formulario__carimbo {
+    min-width: 750px;
+    border: 2px solid black ;
+    border-radius: 10px;
+    margin: 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 2.5em;
+    font-family: arial;
+}
+
+.formulario__carimbo-titulo {
+    margin: 1em auto;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario__carimbo-informacoes {
+    display: flex;
+    padding: 1em;
+    border-radius: 10px;
+    gap: 50px;
+}
+
+legend {
+    padding: 0 10px;
+}
+
+.info__gerais {
+    text-align: end;
+}
+
+.input__geral {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.botao__buscar__ba-tt {
+    padding: 5px 30px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gerar__carimbo {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.cancelar__formulario, .gerar__formulario {
+    width: 50%;
+}
+
+.comentario {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.carimbo {
+    display: none;
+}
+
+.fechar__formulario {
+    display: none;
+}
+
+.abrir__carimbo {
+    display: flex;
+    justify-content: center;
+}
+
+.carimbo__area {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#carimbo-text {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 2px solid black; 
+    border-radius: 10px;
+}
+
+.carimbo__item__fechar-copiar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 80px;
+}
